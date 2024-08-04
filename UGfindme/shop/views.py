@@ -1,5 +1,6 @@
 from django.shortcuts import render,get_object_or_404
 from .models import Category, Product
+from claim.forms import ClaimAddProductForm
 # Create your views here.
 def product_list(request,category_slug=None):
     category = None
@@ -23,8 +24,9 @@ def product_detail(request,id,slug):
     product =get_object_or_404(
         Product, id=id, slug=slug, available=True
     )
+    claim_product_form = ClaimAddProductForm()
     return render(
         request,
         'shop/product/detail.html',
-        {'product':product}
+        {'product':product,'claim_product_form': claim_product_form}
     )

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "shop.apps.ShopConfig",
-    "claim.apps.Claimconfig",
+    "claim.apps.ClaimConfig",
 ]
 
 MIDDLEWARE = [
@@ -125,3 +125,8 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 CLAIM_SESSION_ID ='claim'
+CSRF_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = [
+    'https://localhost:8000',
+    # Add other trusted origins as needed
+]
