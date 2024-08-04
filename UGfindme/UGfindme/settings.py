@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "shop.apps.ShopConfig",
+    "claim.apps.Claimconfig",
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,4 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+CLAIM_SESSION_ID ='claim'
