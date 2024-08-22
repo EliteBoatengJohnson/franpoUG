@@ -1,6 +1,8 @@
 from django.shortcuts import render,get_object_or_404
 from .models import Category, Product
 from claim.forms import ClaimAddProductForm
+from .forms import LoginForm
+from django.contrib.auth import login, authenticate
 # Create your views here.
 def product_list(request,category_slug=None):
     category = None
@@ -30,3 +32,9 @@ def product_detail(request,id,slug):
         'shop/product/detail.html',
         {'product':product,'claim_product_form': claim_product_form}
     )
+
+#  login form for the project
+def Sign_in(request):
+    
+    if request.method == 'GET':
+        form

@@ -19,9 +19,10 @@
         {%endfor %}
     </ul>
  </div>
+ <!-- Main Product -->
  <div id="main" class="product-list">
-    <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}
-        {% for product in products %}
+        <h2>{% if category %}{{ category.name }}{% else %}LOST ITEMS{% endif %}
+            {% for product in products %}</h2>
         <div class="item">
             <a href="{{ product.get_absolute_url }}">
                 <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %} {% endif %}" alt="">
@@ -30,7 +31,8 @@
             <br>
             ${{ product.price }}
             {% endfor %}
+
         </div>
-        {% endblock %}
-    </h1>
+
+{% endblock %}
  </div>

@@ -115,18 +115,27 @@ ul.errorlist {
    padding:10px 0;
 }
 
-
+/* navbar css code */
+.navbar{
+    height: 3rem;
+    display: flex;
+    padding:10px;
+    justify-content: space-between;
+}
+.Signup{
+    margin-top: 10px;
+}
 #header {
     padding:10px 100px;
     font-size:18px;
-    overflow:auto;
+    /* overflow:auto; */
 }
 
 #subheader {
     background:#ececec;
     color:#444;
     padding:15px 100px;
-    overflow:auto;
+    /* overflow:auto; */
 }
 
 #header .logo {
@@ -177,25 +186,36 @@ ul.errorlist {
     color:#fff;
 }
 
-#main {
-    float:left;
-    width: 96%;
-    margin-right:-220px;
-    overflow:hidden;
+#main{
+    width: 100%;
+}
+.item{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+h2{
+    text-align: center;
 }
 
-.product-list .item {
+/* .product-list > .item{
+    width: 25%;
+    text-align: center;
+    padding: 7px;
+} */
+
+/* .product-list .item {
     width:25%;
     padding:10px 20px 10px 0;
     float:left;
     text-align:center;
     line-height:1.2;
-}
+} */
 
-.product-list .item img {
+/* .product-list .item img {
     width:100%;
     margin-bottom:8px;
-}
+} */
 
 .product-detail {
     text-align:justify;

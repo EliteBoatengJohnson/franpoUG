@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "shop.apps.ShopConfig",
     "claim.apps.ClaimConfig",
+    "bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,4 @@ CSRF_TRUSTED_ORIGINS = [
     'https://localhost:8000',
     # Add other trusted origins as needed
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
