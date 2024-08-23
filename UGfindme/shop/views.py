@@ -35,6 +35,6 @@ def product_detail(request,id,slug):
 
 #  login form for the project
 def Sign_in(request):
-    pass
-    # if request.method == 'GET':
-    #     form
+    if request.method == 'GET':
+        form = LoginForm()
+        return render(request,'users/login.html', {'form':form})
