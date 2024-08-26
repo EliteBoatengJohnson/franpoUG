@@ -5,9 +5,9 @@
         <meta charset="utf-8"/>
         <title>{% block title%}UGfindme{% endblock %}</title>
         <link href="{% static "css/base.css" %}" rel="stylesheet">
-        {% load bootstrap5 %}
+        {% comment %} {% load bootstrap5 %}
         {% bootstrap_css %}
-        {% bootstrap_javascript %}
+        {% bootstrap_javascript %} {% endcomment %}
     </head>
     <body>
         <nav class="navbar">

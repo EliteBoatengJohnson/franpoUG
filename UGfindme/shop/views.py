@@ -39,6 +39,7 @@ def Sign_in(request):
     if request.method == 'GET':
         if request.user.is_authenticated:
             return redirect('shop:product_list')
+        
         form = LoginForm()
         return render(request,'shop/users/login.html', {'form':form})
 
