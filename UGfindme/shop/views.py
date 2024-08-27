@@ -47,9 +47,9 @@ def Sign_in(request):
         form = LoginForm(request.POST)
 
         if form.is_valid():
-            username = form.cleaned_data['email']
+            username = form.cleaned_data['username']
             password = form.cleaned_data['password']
-            user = authenticate(request,email=username,password=password)
+            user = authenticate(request,username=username,password=password)
             if user:
                 login(request,user)
                 messages.success(request,f"Hi {username.title()}, welcome back! ")
@@ -62,4 +62,4 @@ def Sign_in(request):
 def Sign_out(request):
     logout(request)
     messages.success(request,f'You have been logged out.')
-    return redirect('login')
+    return redirect('shop:login')
