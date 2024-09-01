@@ -30,10 +30,14 @@
                         <td>{{ product.name }}</td>
                         <td>{{ item.quantity }}</td>
                         <td>
-                            <form action="{% url "claim:claim_remove" product.id %}" method="post">
+                            {% if product.id %}
+                            <form action="{% url 'claim:claim_remove' product.id %}" method="post">
                                 <input type="submit" value="Remove">
                                 {% csrf_token %}
                             </form>
+                        {% else %}
+                            <p>Unable to remove (Invalid product ID)</p>
+                        {% endif %}
                         </td>
                         <td class="num">{{ item.price }}</td>
                         <td class="num">{{ item.total_price }}</td>

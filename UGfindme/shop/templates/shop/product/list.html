@@ -19,20 +19,29 @@
         {%endfor %}
     </ul>
  </div>
+
  <!-- Main Product -->
- <div id="main" class="product-list">
-        <h2>{% if category %}{{ category.name }}{% else %}LOST ITEMS{% endif %}
-            {% for product in products %}</h2>
-        <div class="item">
-            <a href="{{ product.get_absolute_url }}">
-                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %} {% endif %}" alt="">
-            </a>
-            <a href="{{product.get_absolute_url }}">{{ product.name }}</a>
-            <br>
-            ${{ product.price }}
-            {% endfor %}
+<div id="main" class="product-list">
+    <div class="items-container">
+        <h2>{% if category %}{{ category.name}} {% else %} <span>LOST ITEMS </span>{% endif %}
+        {% for product in products %}  
+            <div class="item">
+               <a href="{{ product.get_absolute_url}}">
+                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'shop/img/no_image.png' %}{% endif %}" alt="{{ product.name }}">
+               <a>    
+                    <h3 class="item-name">
+                       <a href="{{product.get_absolute_url}}"> 
+                         {{ product.name }}
+                       </a> 
+                    </h3>
+                    <form action="{% url 'claim:claim_add' product.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">CLAIM</button>
+                    </form>
+                
+            </div>
+        {% endfor %}  
+    </div>
 
-        </div>
-
-{% endblock %}
- </div>
+ {% endblock %}
+</div>
