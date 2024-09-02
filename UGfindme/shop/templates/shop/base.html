@@ -5,7 +5,10 @@
         <meta charset="utf-8"/>
         <title>{% block title%}UGfindme{% endblock %}</title>
         <link href="{% static "css/base.css" %}" rel="stylesheet">
-         {% comment %} {% load bootstrap5 %}
+        <script src="{% static "js/login.js" %}" ></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+          {% comment %} {% load bootstrap5 %}
         {% bootstrap_css %}
         {% bootstrap_javascript %}  {% endcomment %}
     </head>
@@ -36,116 +39,49 @@
             {% endblock %}
         </div>
     </body>
-    {% comment %} bootstrap{% endcomment %}
-     <!-- Remove the container if you want to extend the Footer to full width. -->
-{% comment %} <div class="container my-5">
-    <!-- Footer -->
-    <footer class="text-center text-white" style="background-color: #3f51b5">
-      <!-- Grid container -->
-      <div class="container">
-        <!-- Section: Links -->
-        <section class="mt-5">
-          <!-- Grid row-->
-          <div class="row text-center d-flex justify-content-center pt-5">
-            <!-- Grid column -->
-            <div class="col-md-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">About us</a>
-              </h6>
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Products</a>
-              </h6>
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Awards</a>
-              </h6>
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Help</a>
-              </h6>
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Contact</a>
-              </h6>
-            </div>
-            <!-- Grid column -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <section class="footer-links">
+          <div class="link-column">
+            <h6><a href="#!">About us</a></h6>
           </div>
-          <!-- Grid row-->
-        </section>
-        <!-- Section: Links -->
-  
-        <hr class="my-5" />
-  
-        <!-- Section: Text -->
-        <section class="mb-5">
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-8">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                distinctio earum repellat quaerat voluptatibus placeat nam,
-                commodi optio pariatur est quia magnam eum harum corrupti
-                dicta, aliquam sequi voluptate quas.
-              </p>
-            </div>
+          <div class="link-column">
+            <h6><a href="#!">Lost Items</a></h6>
+          </div>
+          <div class="link-column">
+            <h6><a href="#!">Awards</a></h6>
+          </div>
+          <div class="link-column">
+            <h6><a href="#!">Help</a></h6>
+          </div>
+          <div class="link-column">
+            <h6><a href="#!">Contact</a></h6>
           </div>
         </section>
-        <!-- Section: Text -->
-  
-        <!-- Section: Social -->
-        <section class="text-center mb-5">
-          <a href="" class="text-white me-4">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-github"></i>
-          </a>
+    
+        <hr>
+    
+        <section class="footer-text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            distinctio earum repellat quaerat voluptatibus placeat nam,
+            commodi optio pariatur est quia magnam eum harum corrupti
+            dicta, aliquam sequi voluptate quas.
+          </p>
         </section>
-        <!-- Section: Social -->
+    
+        <section class="footer-social">
+          <a href="#!" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#!" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#!" class="social-icon"><i class="fab fa-google"></i></a>
+          <a href="#!" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#!" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="#!" class="social-icon"><i class="fab fa-github"></i></a>
+        </section>
       </div>
-      <!-- Grid container -->
-  
-      <!-- Copyright -->
-      <div
-           class="text-center p-3"
-           style="background-color: rgba(0, 0, 0, 0.2)"
-           >
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/"
-           >MDBootstrap.com</a
-          >
+    
+      <div class="footer-copyright">
+        <p>© 2024 Copyright: <a href="https://mdbootstrap.com/">UGfindme.com</a></p>
       </div>
-      <!-- Copyright -->
     </footer>
-    <!-- Footer -->
-  </div>
-   {% endcomment %}
 </html>

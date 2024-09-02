@@ -14,7 +14,7 @@
         {{ product.category }}
       </a>
     </h2>
-    <p class="price">${{ product.price }}</p>
+    {% comment %} <p class="price">${{ product.price }}</p> {% endcomment %}
     <form action="{% url "claim:claim_add" product.id %}" method="post">
       {{ claim_product_form }}
       {% csrf_token %}
