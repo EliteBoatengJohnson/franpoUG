@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "shop.apps.ShopConfig",
     "claim.apps.ClaimConfig",
-    "bootstrap5",
+    
 ]
 
 MIDDLEWARE = [
