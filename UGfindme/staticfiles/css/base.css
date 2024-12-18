@@ -193,9 +193,36 @@ ul.errorlist {
 #sidebar ul li.selected a {
     color:#fff;
 }
+/* admin css */
+.admin-button {
+  background: #1a75ff;    /* Matching the bright blue from the CLAIM buttons */
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  display: inline-block;
+}
 
+.admin-button:hover {
+  background: #0066ff;    /* Slightly darker shade for hover effect */
+  color: #fff;
+}
 
+/* Adjust the Signup div to better accommodate the new button */
+.Signup {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
+.Signup span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 /*  main container - new */
 #main {
